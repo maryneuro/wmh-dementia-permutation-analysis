@@ -121,7 +121,7 @@ def plot_group_box(df, value_col, out_png, title):
     data = [df.loc[df["cdr_group"] == g, value_col].dropna().values for g in GROUP_ORDER]
 
     plt.figure(figsize=(7, 4))
-    plt.boxplot(data, labels=GROUP_ORDER, showfliers=False)
+    plt.boxplot(data, tick_labels=GROUP_ORDER, showfliers=False)
     plt.title(title)
     plt.xlabel("Cognitive group")
     plt.ylabel(value_col)
